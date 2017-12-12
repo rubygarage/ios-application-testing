@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testing_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it2-V9-j91">
+                                <rect key="frame" x="0.0" y="50" width="125" height="40"/>
+                                <accessibility key="accessibilityConfiguration" label="red_button"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZIA-9t-MLX"/>
+                                </constraints>
+                                <state key="normal" title="Red">
+                                    <color key="titleColor" red="1" green="0.06950727541403523" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="redButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Agf-46-Aib"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tza-Hg-7Of">
+                                <rect key="frame" x="125" y="50" width="125" height="40"/>
+                                <accessibility key="accessibilityConfiguration" label="green_button"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0vf-yn-ov5"/>
+                                </constraints>
+                                <state key="normal" title="Green">
+                                    <color key="titleColor" red="0.0" green="0.50004047927461137" blue="0.1986978729909108" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="greenButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3hL-3V-c9f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEA-vX-rbJ">
+                                <rect key="frame" x="250" y="50" width="125" height="40"/>
+                                <accessibility key="accessibilityConfiguration" label="blue_button"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IZ3-eH-3ND"/>
+                                </constraints>
+                                <state key="normal" title="Blue"/>
+                                <connections>
+                                    <action selector="blueButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5bN-Zh-Y4v"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fo7-mc-kx6">
+                                <rect key="frame" x="20" y="110" width="335" height="335"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="color_view"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fo7-mc-kx6" secondAttribute="height" multiplier="1:1" id="s1S-ee-cJ0"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TzG-mh-Qgh">
+                                <rect key="frame" x="18" y="465" width="339" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="opacity_slider"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="UWg-gf-v2B"/>
+                                </constraints>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tza-Hg-7Of" firstAttribute="width" secondItem="eEA-vX-rbJ" secondAttribute="width" id="1ck-Zc-grd"/>
+                            <constraint firstItem="Tza-Hg-7Of" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="5P6-Ay-ag3"/>
+                            <constraint firstItem="TzG-mh-Qgh" firstAttribute="top" secondItem="fo7-mc-kx6" secondAttribute="bottom" constant="20" id="9U4-Q7-zoA"/>
+                            <constraint firstItem="Tza-Hg-7Of" firstAttribute="leading" secondItem="it2-V9-j91" secondAttribute="trailing" id="9qW-lE-JfZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fo7-mc-kx6" secondAttribute="trailing" constant="20" id="BDl-D9-4Gh"/>
+                            <constraint firstItem="eEA-vX-rbJ" firstAttribute="leading" secondItem="Tza-Hg-7Of" secondAttribute="trailing" id="Gk3-ct-5mc"/>
+                            <constraint firstItem="fo7-mc-kx6" firstAttribute="top" secondItem="it2-V9-j91" secondAttribute="bottom" constant="20" id="bzx-dw-2sR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eEA-vX-rbJ" secondAttribute="trailing" id="cqo-Zc-Rr7"/>
+                            <constraint firstItem="TzG-mh-Qgh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ed8-Xk-1Cf"/>
+                            <constraint firstItem="it2-V9-j91" firstAttribute="width" secondItem="Tza-Hg-7Of" secondAttribute="width" id="edB-I5-5B1"/>
+                            <constraint firstItem="eEA-vX-rbJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="fk3-WQ-RWl"/>
+                            <constraint firstItem="it2-V9-j91" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="kXc-by-d5P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TzG-mh-Qgh" secondAttribute="trailing" constant="20" id="pLh-TA-Hzv"/>
+                            <constraint firstItem="it2-V9-j91" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s5q-nc-i2R"/>
+                            <constraint firstItem="fo7-mc-kx6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sy0-tT-oOm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="blueButton" destination="eEA-vX-rbJ" id="99V-lK-UaW"/>
+                        <outlet property="colorView" destination="fo7-mc-kx6" id="4KG-hH-S7n"/>
+                        <outlet property="greenButton" destination="Tza-Hg-7Of" id="aeK-ti-XVC"/>
+                        <outlet property="redButton" destination="it2-V9-j91" id="TOh-Sf-2Et"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
