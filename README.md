@@ -11,7 +11,8 @@ This repository contains the iOS demo project which is configured to unit and UI
 # Installation
 
 All dependencies are available on CocoaPods. Just open a folder with project in terminal and type:
-```pod install
+```
+pod install
 ```
 # Running the tests
 
